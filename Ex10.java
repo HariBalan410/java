@@ -1,4 +1,4 @@
-import java.sql.;
+import java.sql.*;
 public class Test
 {
 public static void main(String s[])throws Exception
@@ -6,11 +6,11 @@ public static void main(String s[])throws Exception
 Connection con;
 PreparedStatement ps;
 Class.forName("com.mysql.jdbc.Driver");
-con=DriverManager.getConnection("jdbc:mysql://localhost:3307/muthupandi","root","");
-ps=con.prepareStatement("insert into students values(101,'muthupandi','Msc(CS)',7.35)");
+con=DriverManager.getConnection("jdbc:mysql://localhost:3307/hari","root","");
+ps=con.prepareStatement("insert into students values(101,'hari balan ','Msc(CS)',7.35)");
 ps.executeUpdate();
 System.out.println("Insert Successfully");
-ps=con.prepareStatement("UPDATE `students` SET `deparment`='ECE' WHERE `rollno`=101");
+ps=con.prepareStatement("UPDATE `students` SET `Branch`='ECE' WHERE `rollno`=101");
 ps.executeUpdate();
 System.out.println("Updated Successfully ");
 ps=con.prepareStatement("SELECT * FROM `students` ");
